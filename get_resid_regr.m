@@ -5,7 +5,6 @@ load('WHI_quad.mat')
 all_Pot_N = all_Pot_N(1:720);
 n = length(all_Pot_N);
 
-% design matrix
 X = zeros(n, numel(theta));
 for i = 1:n
     X(i, :) = all_Pot_N{i}(:);
