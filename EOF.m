@@ -35,5 +35,3 @@ X_L = T_L*V_L';
 r = X-X_L;
 
 save('/home/minjay/svd.mat', 'V_L', 'r', 'T_L', 'mean_map')
-
-plot_pot(reshape(mean_map, size(phi)), phi, theta, 1000)
