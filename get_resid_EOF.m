@@ -20,6 +20,7 @@ end
 
 for i = 1:720
     subplot('Position', [0 0 1 1])
+    title(['Residual, time point ', num2str(i)])
     plot_pot(reshape(double(r(i, :)), size(phi)), phi, theta, 1000)
-    print(['./plots2/', 'fig', num2str(t)], '-dpng')
+    print(['./plots2/', 'fig', num2str(i)], '-dpng')
 end
