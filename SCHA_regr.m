@@ -26,9 +26,9 @@ phi_vec = phi(:, 1);
 
 Cos = zeros(n_phi, M);
 Sin = zeros(n_phi, M);
-for i = 1:M
-    Cos(:, i) = cos(i*phi_vec);
-    Sin(:, i) = sin(i*phi_vec);
+for m = 1:M
+    Cos(:, m) = cos(m*phi_vec);
+    Sin(:, m) = sin(m*phi_vec);
 end
 
 Plm = cell(L+1, 1);
