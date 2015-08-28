@@ -21,8 +21,6 @@ end
 [U, S, V] = svd(X, 'econ');
 
 U = single(U);
-diag_S = diag(S);
-diag_S = single(diag_S);
 V = single(V);
 
 % find the 95% threshold
