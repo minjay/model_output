@@ -1,5 +1,5 @@
 function [coef, resid, y_hat] = SCHA_regr(y, theta, phi, L, M)
-%SCHA_REGR    Spherical cap harmonic regression.
+%SCHA_REGR   Spherical cap harmonic regression.
 %
 %   [coef, resid, y_hat] = SCHA_regr(y, theta, phi, L, M);
 %
