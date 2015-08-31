@@ -8,7 +8,7 @@ L = 8;
 M = 3;
 
 for t = 1:720
-    [coef, resid, y_hat] = SCHA_regr(all_Pot_N{t}, theta, phi, L, M);
+    [coef, resid, y_hat, ~] = SCHA_regr(all_Pot_N{t}, theta, phi, L, M);
     subplot('position', [0 0.5 0.45 0.45])
     title(['True, time point ', num2str(t)])
     plot_pot(all_Pot_N{t}, phi, theta, 1000)
