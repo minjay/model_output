@@ -27,7 +27,6 @@ quiver(0, -1, 0, 2, 0, 'LineWidth', 2, 'color', 'k')
 for i = 1:8
     index = strcmp(labels, direction(i));
     mean_dir = mean(all_resid(index(1:720), :), 1);
-    std_dir = std(all_resid(index(1:720), :));
     axes('position', [loc_x(i) loc_y(i) 0.25 0.25])
     plot_pot_lite(reshape(mean_dir, size(phi)), phi, theta, 1000)
 end
