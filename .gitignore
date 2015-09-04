@@ -1,9 +1,13 @@
 plots/
 plots2/
 plots3/
+plots_all/
+plots_L18
 movie.mp4
 movie2.mp4
 movie3.mp4
+movie4.mp4
+movie5.mp4
 svd.mat
 svd_single.mat
 theta_phi.mat
