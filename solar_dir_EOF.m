@@ -1,3 +1,5 @@
+addpath(genpath('/home/minjay/model_output'))
+
 load('labels.mat')
 
 load('WHI_quad.mat')
