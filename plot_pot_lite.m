@@ -1,4 +1,6 @@
-function plot_pot_lite(Pot, phi, theta, res)
+function plot_pot_lite(Pot, phi, theta, res, max_caxis)
+
+% need package b2r
 
 phi = phi/pi*180;
 theta = (pi/2-theta)/pi*180;
@@ -15,23 +17,11 @@ theta_interp = linspace(90, theta_min, res/4);
 
 Pot_interp = interp2(theta, phi, Pot, theta_interp_mat, phi_interp_mat, 'spline');
 
-axes_pos = get(gca, 'Position');
-axis off
-
-ax1 = axes('Position', axes_pos, 'Visible', 'off');
-x = axes_pos(1);
-y = axes_pos(2);
-width = axes_pos(3);
-height = axes_pos(4);
-axes('Position', [x+width/10, y+height/10, width-width/5, height-height/5]);
-
 worldmap(latlim, lonlim);
-pcolorm(theta_interp_mat, phi_interp_mat, Pot_interp/1e3);
-h_c = colorbar;
-ylabel(h_c, 'Potential Field [kV]');
-max_caxis = max(max(abs(Pot_interp)))/1e3;
-caxis([-max_caxis max_caxis])
-colorbar('off')
+pcolorm(theta_interp_mat, phi_interp_mat, Pot_interp);
+hold on
+contourm(theta_interp_mat, phi_interp_mat, Pot_interp, 'k');
+colormap(b2r(-max_caxis, max_caxis))
 setm(gca, 'ParallelLabel', 'off', 'MeridianLabel', 'off')
 textm(75, 300, '15\circ');
 textm(60, 300, '30\circ');
