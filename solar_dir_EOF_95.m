@@ -1,5 +1,5 @@
 load('labels.mat')
-
+load('theta_phi.mat')
 load('svd.mat')
 
 r = double(r);
