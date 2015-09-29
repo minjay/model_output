@@ -23,10 +23,10 @@ end
 U = single(U);
 V = single(V);
 
-% find the 95% threshold
+% find the 99% threshold
 lambda = diag(S).^2;
 var_exp = cumsum(lambda)./sum(lambda);
-thres = find(var_exp>=0.95, 1, 'first');
+thres = find(var_exp>=0.99, 1, 'first');
 
 % compute the residual fields
 V_L = V(:, 1:thres);
