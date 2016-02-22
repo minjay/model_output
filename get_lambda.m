@@ -1,6 +1,6 @@
 % run on server
 
-load('WHI_single.mat')
+load('WHI_double.mat')
 
 n = length(all_Pot_N);
 
@@ -26,4 +26,4 @@ V = single(V);
 % find the 95% threshold
 lambda = diag(S).^2;
 
-save('/home/minjay/svd_single.mat', 'lambda')
+save('/home/minjay/svd_double.mat', 'lambda')
