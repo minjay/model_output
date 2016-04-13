@@ -1,4 +1,4 @@
-function [coef, resid, y_hat, X] = SCHA_regr(y, theta, phi, L, M)
+function [coef, resid, y_hat, X] = SCHA_regr(y, theta, phi, L, M, multi)
 %SCHA_REGR   Spherical cap harmonic regression.
 %
 %   [coef, resid, y_hat] = SCHA_regr(y, theta, phi, L, M);
@@ -21,7 +21,7 @@ function [coef, resid, y_hat, X] = SCHA_regr(y, theta, phi, L, M)
 [n_phi, n_theta] = size(y);
 n_r = n_phi*n_theta;
 % stretch
-theta_vec = theta(1, :)*4;
+theta_vec = theta(1, :)*multi;
 phi_vec = phi(:, 1);
 
 Cos = zeros(n_phi, M);
