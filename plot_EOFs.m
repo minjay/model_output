@@ -48,5 +48,5 @@ for i = 1:4
     colorbar
     caxis([-max(abs(cf(:))), max(abs(cf(:)))])
     text(-50, -50, sprintf('Min\n%2.3f',min(cf(:))),'FontName','times','Fontsize',10)
-    text(30, -50, sprintf('Max\n%2.3f [V]',max(cf(:))),'FontName','times','Fontsize',10)
+    text(30, -50, sprintf('Max\n%2.3f',max(cf(:))),'FontName','times','Fontsize',10)
 end
