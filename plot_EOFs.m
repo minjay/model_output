@@ -1,4 +1,6 @@
+% svd.mat is obtained from the script EOF.m
 load('svd.mat')
+% svd_quad.mat is obtained from the script get_lambda.m
 load('svd_quad.mat')
 load('theta_phi.mat')
 V_L = double(V_L);
