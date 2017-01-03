@@ -7,7 +7,7 @@ phi_rot = phi+pi/2;
 [x, y] = pol2cart(phi_rot, theta/pi*180);
 
 figure
-subplot = @(m,n,p) subtightplot (m, n, p, [0.1 0.05], [0.05 0.1], [0.1 0.05]);
+subplot = @(m,n,p) subtightplot (m, n, p, [0.15 0.05], [0.05 0.1], [0.1 0.05]);
 
 n_EOF = 20;
 ratio = cumsum(lambda)/sum(lambda);
